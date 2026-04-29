@@ -1,59 +1,38 @@
-# App
+# Prueba tecnica Angular (Semi Senior)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.24.
+Proyecto base para evaluar candidatos frontend Angular con ejercicios independientes.  
+Formato simplificado: **4 ejercicios de 10 minutos** (total: **40 minutos**).
 
-## Development server
+## Cobertura en 30 min
 
-To start a local development server, run:
+- RxJS (suscripciones/desuscripciones y operadores)
+- Dos servicios dependientes dentro del mismo flujo reactivo
+- Directivas en templates (estructural basica)
+- Signals e interoperabilidad con observables (`toSignal`)
+- Formularios reactivos basicos con validaciones
 
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Levantar el proyecto
 
 ```bash
-ng generate component component-name
+npm install
+npm start
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Abrir `http://localhost:4200/`.
 
-```bash
-ng generate --help
-```
+## Como evaluar
 
-## Building
+1. Selecciona un ejercicio desde la pantalla principal.
+2. Asigna 10 minutos por ejercicio (maximo 40 total).
+3. Evalua con los criterios concretos incluidos en cada reto.
 
-To build the project run:
+## Criterios generales de correccion
 
-```bash
-ng build
-```
+- Dominio de reactividad basica (composicion y manejo de error).
+- Calidad de codigo y claridad en template.
+- Convenciones Angular + tipado en TypeScript.
+- Capacidad de explicar decisiones tecnicas bajo tiempo.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Nota
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Este repositorio funciona como un "hub" de enunciados tecnicos cortos, listos para entrevista rapida.

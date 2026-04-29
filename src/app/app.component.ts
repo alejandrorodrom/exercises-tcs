@@ -5,8 +5,14 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styles: [`
+    :host {
+      display: block;
+      min-height: 100vh;
+      background: #f5f7fb;
+      color: #111827;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    }
+  `]
 })
-export class AppComponent {
-  title = 'app';
-}
+export class AppComponent {}
