@@ -12,8 +12,8 @@ import { EXERCISES } from './exercises.data';
       <section class="hero">
         <h1>Prueba tecnica Angular semi senior</h1>
         <p>
-          Este proyecto contiene ejercicios independientes. Puedes asignarlos por separado para
-          evitar bloqueos entre retos.
+          Este proyecto contiene ejercicios independientes. Cada reto presenta un objetivo claro y
+          criterios de evaluacion para evitar bloqueos entre ejercicios.
         </p>
       </section>
 
@@ -21,7 +21,7 @@ import { EXERCISES } from './exercises.data';
         @for (exercise of exercises; track exercise.id) {
           <article class="card">
             <h2>{{ exercise.titulo }}</h2>
-            <p>{{ exercise.objetivo }}</p>
+            <p><strong>Objetivo:</strong> {{ exercise.objetivo }}</p>
             <div class="meta">
               <span>Tiempo: {{ exercise.tiempoEstimado }}</span>
             </div>

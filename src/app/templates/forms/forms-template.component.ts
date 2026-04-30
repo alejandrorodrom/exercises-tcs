@@ -25,7 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
         <button type="submit">
           Enviar
-          <!-- TODO CANDIDATO: agregar condicion de habilitacion del submit -->
+          <!-- INSTRUCCION: habilitar el submit solo cuando el formulario sea valido. -->
         </button>
       </form>
 
@@ -45,15 +45,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class FormsTemplateComponent {
   /**
-   * TODO CANDIDATO:
-   * Resultado esperado:
-   * - Formulario funcional con validaciones.
-   * - Mensajes de error consistentes.
-   * - Envio controlado por el estado del formulario.
+   * INSTRUCCIONES:
+   * - Construir un formulario reactivo funcional con validaciones.
+   * - Mostrar mensajes de error claros y consistentes.
+   * - Permitir el envio solo cuando el estado del formulario sea valido.
    */
   readonly candidateForm = null as never;
 
   submit(): void {
-    // TODO CANDIDATO
+    // INSTRUCCION: implementar el envio respetando el estado de validacion del formulario.
   }
 }

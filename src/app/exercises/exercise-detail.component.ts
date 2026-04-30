@@ -16,7 +16,7 @@ import { exerciseById } from './exercises.data';
       @if (exercise(); as selectedExercise) {
         <section class="header">
           <h1>{{ selectedExercise.titulo }}</h1>
-          <p>{{ selectedExercise.objetivo }}</p>
+          <p><strong>Objetivo:</strong> {{ selectedExercise.objetivo }}</p>
           <span class="badge">Tiempo estimado: {{ selectedExercise.tiempoEstimado }}</span>
           <a
             class="open-template"
@@ -37,7 +37,7 @@ import { exerciseById } from './exercises.data';
           </article>
 
           <article class="card">
-            <h2>Criterios de evaluacion</h2>
+            <h2>Objetivos de evaluacion</h2>
             <ul>
               @for (item of selectedExercise.criterios; track item) {
                 <li>{{ item }}</li>
