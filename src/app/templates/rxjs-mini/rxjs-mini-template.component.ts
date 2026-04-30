@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { OrganizationService } from './services/organization.service';
 import { CandidateUser, UsersService } from './services/users.service';
 
 @Component({
@@ -17,8 +18,12 @@ import { CandidateUser, UsersService } from './services/users.service';
       </label>
 
       <p>
-        <strong>TODO:</strong> al cambiar el codigo, debe cargar usuarios de esa organizacion,
-        reflejar estado de carga/error y explicar brevemente la estrategia elegida.
+        <strong>Objetivo del ejercicio:</strong> implementar un flujo RxJS donde el codigo ingresado
+        obtenga una organizacion y luego su lista de usuarios.
+      </p>
+      <p>
+        <strong>Instrucciones:</strong> actualizar estados de <em>loading</em>, <em>error</em> y
+        resultados en users, y justificar en un comentario breve por que se eligio ese operador.
       </p>
 
       @if (loading) {
@@ -47,21 +52,27 @@ export class RxjsTemplateComponent {
   loading = false;
   errorMessage = '';
 
-  constructor(private readonly usersService: UsersService) {
+  constructor(
+    private readonly usersService: UsersService,
+    private readonly organizationService: OrganizationService
+  ) {
     this.setupStream();
   }
 
   private setupStream(): void {
     /**
-     * TODO CANDIDATO:
-     * Resultado esperado:
-     * - Flujo funcional entre input -> organizacion -> usuarios.
-     * - Estado de UI coherente (loading, error, lista).
-     * - Explicacion breve de la decision tecnica.
+     * INSTRUCCIONES:
+     * - Leer el codigo de organizacion desde el FormControl y reaccionar a cada cambio.
+     * - Consultar primero la organizacion y, con ese resultado, obtener sus usuarios.
+     * - Actualizar la UI con tres estados: cargando, error y listado de resultados.
+     * - Limpiar resultados anteriores cuando el flujo lo requiera para evitar datos inconsistentes.
+     * - Asegurar que no queden suscripciones activas al destruir el componente.
+     * - Documentar en 1 o 2 lineas la estrategia elegida para el flujo reactivo.
      *
-     * Nota: this.usersService se deja inyectado para que no haya warning de imports
-     * mientras se completa el ejercicio.
+     * Nota: usersService y organizationService se mantienen inyectados
+     * para usarlos en la implementacion.
      */
     void this.usersService;
+    void this.organizationService;
   }
 }

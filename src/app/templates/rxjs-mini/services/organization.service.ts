@@ -6,12 +6,22 @@ export interface Organization {
   name: string;
 }
 
+const ORGANIZATIONS_BY_CODE: Record<string, Organization> = {
+  acme: { id: 'ACME', name: 'Acme Corporation' },
+  globex: { id: 'GLOBEX', name: 'Globex Corporation' },
+  initech: { id: 'INITECH', name: 'Initech' }
+};
+
 @Injectable({ providedIn: 'root' })
 export class OrganizationService {
   getOrganizationByCode(code: string): Observable<Organization> {
-    return of({
-      id: code.toUpperCase(),
-      name: `Organizacion ${code.toUpperCase()}`
-    });
+    const normalizedCode = code.trim().toLowerCase();
+    const fallbackId = normalizedCode.toUpperCase();
+    return of(
+      ORGANIZATIONS_BY_CODE[normalizedCode] ?? {
+        id: fallbackId,
+        name: `Organizacion ${fallbackId}`
+      }
+    );
   }
 }

@@ -7,11 +7,6 @@ export const routes: Routes = [
       import('./exercises/exercise-home.component').then((m) => m.ExerciseHomeComponent)
   },
   {
-    path: 'ejercicios/:id',
-    loadComponent: () =>
-      import('./exercises/exercise-detail.component').then((m) => m.ExerciseDetailComponent)
-  },
-  {
     path: 'templates/rxjs',
     loadComponent: () =>
       import('./templates/rxjs-mini/rxjs-mini-template.component').then(
