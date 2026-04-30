@@ -12,8 +12,8 @@ import { EXERCISES } from './exercises.data';
       <section class="hero">
         <h1>Prueba tecnica Angular semi senior</h1>
         <p>
-          Este proyecto contiene ejercicios independientes. Selecciona un reto para abrir
-          directamente su template.
+          Este proyecto contiene ejercicios independientes. Revisa la instruccion de cada reto y
+          abre su template para resolverlo.
         </p>
       </section>
 
@@ -21,6 +21,7 @@ import { EXERCISES } from './exercises.data';
         @for (exercise of exercises; track exercise.id) {
           <article class="card">
             <h2>{{ exercise.titulo }}</h2>
+            <p><strong>Instruccion:</strong> {{ exercise.instruccion }}</p>
             <div class="meta">
               <span>Tiempo: {{ exercise.tiempoEstimado }}</span>
             </div>

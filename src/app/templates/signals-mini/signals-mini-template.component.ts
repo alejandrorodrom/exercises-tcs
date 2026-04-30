@@ -19,8 +19,8 @@ import { Component, computed, signal } from '@angular/core';
       <p>Tick desde observable: {{ tick() }}</p>
 
       <p>
-        <strong>TODO:</strong> completar la pantalla para que el valor derivado y la fuente reactiva
-        externa se actualicen correctamente.
+        <strong>RESULTADO ESPERADO:</strong> completar la pantalla para que el valor derivado y el tick
+        desde una fuente reactiva externa se actualicen en tiempo real.
       </p>
     </main>
   `,
@@ -33,27 +33,37 @@ export class SignalsTemplateComponent {
   readonly count = signal(0);
   readonly doubleCount = computed(() => {
     /**
-     * TODO CANDIDATO:
-     * Resultado esperado:
-     * - Este valor debe derivarse del estado local.
+     * RESULTADO ESPERADO:
+     * - Derivar este valor directamente del estado local.
+     * - Mantener una salida coherente con el valor actual del contador.
      */
     return 0;
   });
-  readonly tick = signal('TODO: conectar una fuente reactiva externa');
+  /**
+   * RESULTADO ESPERADO:
+   * - Representar un valor que cambie automaticamente en el tiempo.
+   * - Usar una fuente observable y exponer su valor en template mediante un signal.
+   * - Verificar que el valor visible cambie sin interaccion con botones.
+   */
+  readonly tick = signal('--');
 
   increment(): void {
     /**
-     * TODO CANDIDATO:
-     * Resultado esperado:
-     * - Esta accion debe modificar el estado local.
+     * RESULTADO ESPERADO:
+     * - Actualizar el estado local del contador en una unidad positiva.
      */
   }
 
   decrement(): void {
     /**
-     * TODO CANDIDATO:
-     * Resultado esperado:
-     * - Esta accion debe modificar el estado local.
+     * RESULTADO ESPERADO:
+     * - Actualizar el estado local del contador en una unidad negativa.
      */
   }
+
+  /**
+   * EJEMPLO UI ESPERADA:
+   * - Al hacer click en botones, el contador cambia y el doble se actualiza.
+   * - El tick cambia automaticamente con el tiempo sin clicks.
+   */
 }

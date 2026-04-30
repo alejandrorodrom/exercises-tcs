@@ -18,12 +18,8 @@ import { CandidateUser, UsersService } from './services/users.service';
       </label>
 
       <p>
-        <strong>Objetivo del ejercicio:</strong> implementar un flujo RxJS donde el codigo ingresado
-        obtenga una organizacion y luego su lista de usuarios.
-      </p>
-      <p>
-        <strong>Instrucciones:</strong> actualizar estados de <em>loading</em>, <em>error</em> y
-        resultados en users, y justificar en un comentario breve por que se eligio ese operador.
+        <strong>RESULTADO ESPERADO:</strong> al cambiar el codigo, se consulta la organizacion y se
+        muestra su lista de usuarios con estados de carga y error.
       </p>
 
       @if (loading) {
@@ -61,18 +57,20 @@ export class RxjsTemplateComponent {
 
   private setupStream(): void {
     /**
-     * INSTRUCCIONES:
-     * - Leer el codigo de organizacion desde el FormControl y reaccionar a cada cambio.
-     * - Consultar primero la organizacion y, con ese resultado, obtener sus usuarios.
-     * - Actualizar la UI con tres estados: cargando, error y listado de resultados.
-     * - Limpiar resultados anteriores cuando el flujo lo requiera para evitar datos inconsistentes.
-     * - Asegurar que no queden suscripciones activas al destruir el componente.
-     * - Documentar en 1 o 2 lineas la estrategia elegida para el flujo reactivo.
-     *
-     * Nota: usersService y organizationService se mantienen inyectados
-     * para usarlos en la implementacion.
+     * RESULTADO ESPERADO:
+     * - Reaccionar a cambios del codigo de organizacion.
+     * - Resolver el flujo organizacion -> usuarios.
+     * - Reflejar loading, error y resultados en la UI.
+     * - Evitar suscripciones activas al destruir el componente.
      */
     void this.usersService;
     void this.organizationService;
   }
+
+  /**
+   * EJEMPLO UI ESPERADA:
+   * - Al iniciar o cambiar codigo: aparece "Cargando...".
+   * - Si la consulta falla: aparece mensaje de error.
+   * - Si la consulta es correcta: se muestra lista de usuarios.
+   */
 }

@@ -17,7 +17,7 @@ import { CanAccessDirective } from './directives/can-access.directive';
         Zona visible solo para admin.
       </section>
 
-      <p><strong>TODO:</strong> validar que el contenido se muestre/oculte segun el rol activo.</p>
+      <p><strong>RESULTADO ESPERADO:</strong> el contenido se muestra u oculta segun el rol activo.</p>
     </main>
   `,
   styles: [`
@@ -30,10 +30,15 @@ export class DirectivasTemplateComponent {
 
   toggleRole(): void {
     /**
-     * TODO CANDIDATO:
-     * Resultado esperado:
+     * RESULTADO ESPERADO:
      * - El boton cambia el rol actual.
      * - El cambio de rol impacta visualmente el bloque protegido.
      */
   }
+
+  /**
+   * EJEMPLO UI ESPERADA:
+   * - Rol viewer: no se muestra la zona de admin.
+   * - Rol admin: se muestra el bloque "Zona visible solo para admin.".
+   */
 }

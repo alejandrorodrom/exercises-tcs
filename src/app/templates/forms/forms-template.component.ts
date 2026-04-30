@@ -15,22 +15,22 @@ import { ReactiveFormsModule } from '@angular/forms';
           Nombre
           <input type="text" formControlName="name" />
         </label>
-        <p class="error">TODO: mostrar feedback de validacion cuando corresponda.</p>
+        <p class="error">RESULTADO ESPERADO: mostrar error solo cuando corresponda.</p>
 
         <label>
           Correo
           <input type="email" formControlName="email" />
         </label>
-        <p class="error">TODO: mostrar feedback de validacion cuando corresponda.</p>
+        <p class="error">RESULTADO ESPERADO: mostrar error solo cuando corresponda.</p>
 
         <button type="submit">
           Enviar
-          <!-- INSTRUCCION: habilitar el submit solo cuando el formulario sea valido. -->
+          <!-- RESULTADO ESPERADO: habilitar submit solo con formulario valido. -->
         </button>
       </form>
 
       <p>
-        <strong>TODO:</strong> completar el flujo para que el formulario valide, muestre errores y
+        <strong>RESULTADO ESPERADO:</strong> completar el flujo para que el formulario valide, muestre errores y
         permita enviar solo cuando corresponda.
       </p>
     </main>
@@ -45,7 +45,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class FormsTemplateComponent {
   /**
-   * INSTRUCCIONES:
+   * RESULTADO ESPERADO:
    * - Construir un formulario reactivo funcional con validaciones.
    * - Mostrar mensajes de error claros y consistentes.
    * - Permitir el envio solo cuando el estado del formulario sea valido.
@@ -53,6 +53,12 @@ export class FormsTemplateComponent {
   readonly candidateForm = null as never;
 
   submit(): void {
-    // INSTRUCCION: implementar el envio respetando el estado de validacion del formulario.
+    // RESULTADO ESPERADO: enviar solo cuando el formulario sea valido.
   }
+
+  /**
+   * EJEMPLO UI ESPERADA:
+   * - Con campos invalidos: se muestran mensajes de error por cada campo y submit deshabilitado.
+   * - Con campos validos: no hay errores visibles y submit habilitado.
+   */
 }
